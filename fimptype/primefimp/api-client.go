@@ -91,7 +91,7 @@ func (mh *ApiClient) notifyRouter() {
 		if mh.stopFlag {
 			break
 		}
-		notif, err := FimpToNotify(msg)
+		notif, err := FimpToNotify(msg.Payload)
 		if err != nil {
 			log.Debug("<PF-API> Can't cast to Notify . Err:", err)
 			continue
